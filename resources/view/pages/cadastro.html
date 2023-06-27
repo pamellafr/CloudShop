@@ -1,0 +1,71 @@
+<form method="post" id="form">
+    <input type="hidden" value="cadastrar" name="tipo">
+    <div class="botoes">
+        <button type="button" id="menu-login">Informações de Login</button>
+        <button type="button" id="menu-pessoais" disabled>Informações Pessoais</button>
+        <button type="button" id="menu-pagamento" disabled>Informações de Pagamento</button>
+    </div>
+    <div class="infos">
+        <div class="info info-login" id="info-login">
+            <div class="titulo">
+                Informações de Login
+            </div>
+            <div class="inputs">
+                <input type="email" name="email" placeholder="E-mail *" required>
+                <div class="senha">
+                    <input type="password" name="senha" placeholder="Senha *" required id="senha-input">
+                    <button type="button" id="senha-button"><i class="fa fa-eye"></i></button>
+                </div>
+                <p class="aviso">Preencha o formulario antes de continuar</p>
+                <button type="button" id="continuar-pessoais">Continuar</button>
+            </div>
+        </div>
+        <div class="info info-pessoais" id="info-pessoais">
+            <div class="titulo">
+                Informações Pessoais
+            </div>
+            <div class="inputs">
+                <input type="text" name="nome" placeholder="Nome Completo *" required>
+                <div class="radio">
+                    <p>
+                        <label for="contaFisica">
+                            <input type="radio" name="pessoa" value="fisica" id="contaFisica" required checked>
+                        </label>
+                        Pessoa Física
+                    </p>
+                    <p>
+                        <label for="contaJuridica">
+                            <input type="radio" name="pessoa" value="juridica" id="contaJuridica" required> 
+                        </label>
+                        Pessoa Jurídica
+                    </p>
+                </div>
+                <input type="text" name="cpf" placeholder="CPF *" required>
+                <input type="text" name="cnpj" placeholder="CNPJ *" required>
+                <p class="input-titulo">Nascimento *</p>
+                <input type="date" name="nascimento" placeholder="Nascimento *" required>
+                <input type="text" name="telefone" placeholder="Celular *" required>
+                <input type="text" name="endereco" placeholder="Endereço de Entrega *" required>
+                <input type="text" name="cep" placeholder="CEP *" required>
+                <p class="aviso">Preencha o formulario antes de continuar</p>
+                <button type="button" id="voltar-login">Voltar</button>
+                <button type="button" id="continuar-pagamento">Continuar</button>
+            </div>
+        </div>
+        <div class="info info-pagamento" id="info-pagamento">
+            <div class="titulo">
+                Informações de Pagamento
+            </div>
+            <div class="inputs">
+                <p class="aviso">Preencha o formulario antes de continuar</p>
+                <input type="number" name="cartao" placeholder="Numero do Cartao *" required>
+                <input type="text" name="titular" placeholder="Nome do Titular *" required>
+                <input type="number" name="codigo" placeholder="Código de Segurança *" required>
+                <p class="input-titulo">Vencimento *</p>
+                <input type="date" name="vencimento" placeholder="Vencimento *" required>
+                <button type="button" id="voltar-pessoais">Voltar</button>
+                <button type="submit" id="concluir">Finalizar</button>
+            </div>
+        </div>
+    </div>
+</form>
